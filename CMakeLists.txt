@@ -6,6 +6,10 @@ message(${PROJECT_SOURCE_DIR})
 message(${CMAKE_SOURCE_DIR})
 message(${CMAKE_BINARY_DIR})
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 set(YAML_CPP_PATH "3rd/yaml-cpp")
 
 include_directories(3rd/yaml-cpp/include)
