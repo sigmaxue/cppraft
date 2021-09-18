@@ -1,3 +1,9 @@
 [submodule "3rd/yaml-cpp"]
 	path = 3rd/yaml-cpp
 	url = git@github.com:jbeder/yaml-cpp.git
+[submodule "3rd/ananas"]
+	path = 3rd/ananas
+	url = git@github.com:sigmaxue/ananas.git
+[submodule "3rd/cmdline"]
+	path = 3rd/cmdline
+	url = git@github.com:sigmaxue/cmdline.git

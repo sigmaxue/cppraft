@@ -1,8 +1,16 @@
-set(RAFT_BIN raft_demo)
-add_executable(${RAFT_BIN} demo.cc)
+set(RAFT_BIN raft)
 
-target_link_libraries(${RAFT_BIN} libyaml-cpp.a)
-add_dependencies(${RAFT_BIN} yaml-cpp)
+aux_source_directory(. SRCS)
+add_executable(${RAFT_BIN} ${SRCS})
+
+target_link_libraries(${RAFT_BIN}
+libyaml-cpp.a
+libananas_rpc.a
+libananas_net.a
+libananas_util.a
+pthread
+)
+add_dependencies(${RAFT_BIN} yaml-cpp ananas_rpc)
 
 set_target_properties(${RAFT_BIN} PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
