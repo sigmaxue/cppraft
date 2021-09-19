@@ -8,6 +8,7 @@
 
 #include <ananas/net/Application.h>
 #include <ananas/util/Logger.h>
+#include <fmt/include/fmt/core.h>
 #include <yaml-cpp/yaml.h>
 
 #include "global_var.h"
@@ -30,14 +31,14 @@ void BeforeStart() {
         std::cout << "age:" << config["age"].as<int>() << std::endl;
         for (YAML::const_iterator it = config["skills"].begin();
              it != config["skills"].end(); ++it) {
-            std::cout << it->first.as<std::string>() << ":"
-                      << it->second.as<int>() << std::endl;
+            fmt::print("{}:{}\n", it->first.as<std::string>(),
+                       it->second.as<int>());
         }
         if (!config["no"].IsDefined()) {
-            std::cout << "config key not exist" << std::endl;
+            fmt::print("config key not exist!\n");
         }
     } catch (...) {
-        std::cout << "config error!" << std::endl;
+        fmt::print("config error!\n");
     }
 }
 

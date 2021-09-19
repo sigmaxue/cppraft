@@ -7,3 +7,6 @@
 [submodule "3rd/cmdline"]
 	path = 3rd/cmdline
 	url = git@github.com:sigmaxue/cmdline.git
+[submodule "3rd/fmt"]
+	path = 3rd/fmt
+	url = git@github.com:fmtlib/fmt.git

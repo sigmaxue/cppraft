@@ -8,9 +8,10 @@ libyaml-cpp.a
 libananas_rpc.a
 libananas_net.a
 libananas_util.a
+libfmt.a
 pthread
 )
-add_dependencies(${RAFT_BIN} yaml-cpp ananas_rpc)
+add_dependencies(${RAFT_BIN} fmt yaml-cpp ananas_rpc)
 
 set_target_properties(${RAFT_BIN} PROPERTIES 
     RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
