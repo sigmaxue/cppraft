@@ -10,7 +10,7 @@ sudo make install
 ```
 ## 编译cppraft
 ```
-git@github.com:sigmaxue/cppraft.git
+git clone git@github.com:sigmaxue/cppraft.git
 git submodule update --init --recursive
 mkdir build
 cd build
